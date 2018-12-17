@@ -19,13 +19,18 @@ class CommandCenter():
             self.__send_to_drone(0, 63, 64, 63, 144, 16, 16, 0)  # stand by
         elif state == States.STAND_BY:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 64)  # start engines
+        elif state == States.HOVERING:
+            self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)  #
+        elif state == States.LANDING:
+            self.__send_to_drone(40, 63, 64, 63, 144, 16, 16, 0)  #
+            print("landing")
         elif state == States.STOP or state == States.STOP_BEFORE_EXIT:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)  # stop
         elif state == States.MANUAL_CONTROL:
             up_down = 126 + int(-1 * my_joystick.get_axis_val(AxisIndex.UP_DOWN) * 126)
             left_right = 63 + int(my_joystick.get_axis_val(AxisIndex.LEFT_RIGHT) * 63)
             rotate = 63 + int(my_joystick.get_axis_val(AxisIndex.ROTATE) * 63)
-            forward_backwards = 64 + int(my_joystick.get_axis_val(AxisIndex.FORWARD_BACKWARDS) * 63)
+            forward_backwards = 64 + int(my_joystick.get_axis_val(AxisIndex.FORWARD_BACKWARDS) * 63)      #check
             self.__send_to_drone(up_down, rotate, forward_backwards, left_right, 144, 16, 16, 0)
 
     @staticmethod
