@@ -3,6 +3,8 @@ import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GObject
 
+import numpy as np
+
 import cv2
 import os
 import time
@@ -30,24 +32,14 @@ class Camera():
     def save_video(self):
         image_folder = 'image_temp'
         path = './' + str(image_folder)
-        tm = time.time()
-        #('%s', % time)
+        tm = time.clock()
+        tm = tm*10**6
+        modulo = 1
         print(tm)
-        cv2.imwrite(os.path.join(path, str(tm) + '.png'), self.RGB_image)
+        if (tm % modulo == 0):
+            cv2.imwrite(os.path.join(path, str(tm) + '.png'), self.RGB_image)
 
-        # video_name = 'video.avi'
-        #
-        # images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
-        # frame = cv2.imread(os.path.join(image_folder, images[0]))
-        # height, width, layers = frame.shape
-        #
-        # video = cv2.VideoWriter(video_name, -1, 1, (width, height))
-        #
-        # for image in images:
-        #     video.write(cv2.imread(os.path.join(image_folder, image)))
 
-        #cv2.destroyAllWindows()
-        #video.release()
 
 
     def update_RGB_image(self):
