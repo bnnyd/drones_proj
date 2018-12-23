@@ -7,8 +7,6 @@ import logging
 
 ## log definitions:
 log_file_name = 'my.log'
-for i in range(19):
-    print(i)
 ## if there is a log of a previous run, delete it
 if os.path.exists(log_file_name):
     os.remove(log_file_name)
