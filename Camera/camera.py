@@ -3,6 +3,10 @@ import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GObject
 
+import cv2
+import os
+import time
+
 from .create_gstreamer_pipe import create_gstreamer_pipe
 from .convert_YUV import YUV_to_RGB, YUV_to_gray
 
@@ -15,14 +19,40 @@ class Camera():
         self.RGB_image = YUV_to_RGB(buffer)
         self.gray_image = YUV_to_gray(buffer)
 
+
+
     def __get_buffer(self):
         sample = self.sink.emit("pull-sample")
         buff = sample.get_buffer()
         buffer = buff.extract_dup(0, buff.get_size())
         return buffer
 
+    def save_video(self):
+        image_folder = 'image_temp'
+        path = './' + str(image_folder)
+        tm = time.time()
+        #('%s', % time)
+        print(tm)
+        cv2.imwrite(os.path.join(path, str(tm) + '.png'), self.RGB_image)
+
+        # video_name = 'video.avi'
+        #
+        # images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
+        # frame = cv2.imread(os.path.join(image_folder, images[0]))
+        # height, width, layers = frame.shape
+        #
+        # video = cv2.VideoWriter(video_name, -1, 1, (width, height))
+        #
+        # for image in images:
+        #     video.write(cv2.imread(os.path.join(image_folder, image)))
+
+        #cv2.destroyAllWindows()
+        #video.release()
+
+
     def update_RGB_image(self):
         self.RGB_image = YUV_to_RGB(bytearray(self.__get_buffer()))
+        self.save_video()
 
     def update_gray_image(self):
         self.gray_image = YUV_to_gray(bytearray(self.__get_buffer()))

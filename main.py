@@ -11,7 +11,7 @@ from Control.command_center import CommandCenter
 import logging
 #from run_me import logger
 
-#from Camera.camera import Camera
+from Camera.camera import Camera
 #from scratch_joystick import scratch
 
 
@@ -25,7 +25,7 @@ my_joystick = Joystick(left_right_clip_val,forward_backwards_clip_val,rotate_cli
 #logger.error('bbbbb')
 #logger.critical('aaa')
 
-#my_camera = Camera()
+my_camera = Camera()
 my_command_center = CommandCenter()
 my_screen = Screen()
 state=States.IDLE
@@ -42,10 +42,10 @@ while state != States.EXIT:
         cnt = 0
     #time.sleep(0.1)
     #scratch()
-    #image = my_camera.get_RGB_image()
-   # cv2.imshow("video", image)
-    #cv2.waitKey(1)
-    #my_camera.update_RGB_image()
+    image = my_camera.get_RGB_image()
+    cv2.imshow("video", image)
+    cv2.waitKey(1)
+    my_camera.update_RGB_image()
     my_screen.update_state(state)
     my_joystick.update_values()
 
