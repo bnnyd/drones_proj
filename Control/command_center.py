@@ -3,6 +3,12 @@ import socket
 from General.general_common import States
 from .control_common import AxisIndex
 
+#from auto_hover import find_direction
+from .auto_hover import AutoHover
+
+
+
+
 class CommandCenter():
     def __init__(self):
         self.UDP_IP = "172.16.10.1" # TODO: read these values from config file
@@ -19,8 +25,18 @@ class CommandCenter():
             self.__send_to_drone(0, 63, 64, 63, 144, 16, 16, 0)  # stand by
         elif state == States.STAND_BY:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 64)  # start engines
+
         elif state == States.HOVERING:
-            self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)  #
+        #    self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)  #
+            A = AutoHover()
+            x, y = A.find_direction([100, 56], [320, 160])
+            forward_backwards, left_right = A.engine_power(x,y,[320,160])
+            print(forward_backwards, left_right)
+            self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
+
+
+        #move = find_direction([200, 200], [320, 320])
+
         elif state == States.LANDING:
             self.__send_to_drone(40, 63, 64, 63, 144, 16, 16, 0)  #
             print("landing")
