@@ -2,9 +2,10 @@
 import socket
 from General.general_common import States
 from .control_common import AxisIndex
-
+from Camera.camera import Camera
 #from auto_hover import find_direction
 from .auto_hover import AutoHover
+from imageProcessing import ImageProcessing
 
 
 
@@ -27,11 +28,13 @@ class CommandCenter():
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 64)  # start engines
 
         elif state == States.HOVERING:
-        #    self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)  #
+            self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)  #
+        elif state == States.PICTURE_HOVERING:
+            cX, cY, xlen, ylen = ImageProcessing.object_center()
             A = AutoHover()
-            x, y = A.find_direction([100, 56], [320, 160])
-            forward_backwards, left_right = A.engine_power(x,y,[320,160])
-            print(forward_backwards, left_right)
+            x, y = A.find_direction(expected=[cX, cY], frame_size=[xlen, ylen])
+            forward_backwards, left_right = A.engine_power(x, y, [xlen, ylen])
+            print("forward backward power is " + str(forward_backwards) + "left right power is" + str(left_right))
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
 

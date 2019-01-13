@@ -30,6 +30,14 @@ def getState(state, my_joystick,cnt):  #change
     elif state == States.HOVERING:
         if my_joystick.get_button_val(ButtonIndex.BIG_BUTTON) == 1:
             return States.MANUAL_CONTROL
+        if my_joystick.get_button_val(ButtonIndex.TRIGGER) == 1:
+            return States.PICTURE_HOVERING
+        if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
+            return States.STOP_BEFORE_EXIT
+        if my_joystick.get_button_val(ButtonIndex.RIGHT_BUTTON) == 1:
+            return States.LANDING
+        ### insest state
+    elif state == States.PICTURE_HOVERING:
         if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
             return States.STOP_BEFORE_EXIT
         if my_joystick.get_button_val(ButtonIndex.RIGHT_BUTTON) == 1:

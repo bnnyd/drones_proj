@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import cv2
+import os
 import time
 
 from General.state_machine import getState
@@ -24,7 +25,8 @@ my_joystick = Joystick(left_right_clip_val,forward_backwards_clip_val,rotate_cli
 
 #logger.error('bbbbb')
 #logger.critical('aaa')
-
+#if os.path.exists("./" + Camera.IMAGE_DIR):
+ #   os.remove(Camera.IMAGE_DIR)
 my_camera = Camera()
 my_command_center = CommandCenter()
 my_screen = Screen()
