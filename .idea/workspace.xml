@@ -2,15 +2,319 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b00eff-5a19-4871-8d09-0ac442f1cfaa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Camera/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/Camera/camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/auto_hover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Control/auto_hover.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/command_center.py" beforeDir="false" afterPath="$PROJECT_DIR$/Control/command_center.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/General/general_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/General/general_common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/General/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/General/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/General/state_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/General/state_machine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imageProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageProcessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10010580.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10095010.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10176455.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10254535.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10302455.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10366035.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10382905.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10479870.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10509925.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10522590.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10575530.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10659235.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10664570.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10729810.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10757290.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10767625.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10801690.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10851355.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10861220.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10923240.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/10978580.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11037845.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11060540.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11107690.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11192365.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11213265.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11220185.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11234530.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11268805.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11310260.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11311745.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11388555.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11431455.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11510005.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11572250.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11621150.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11642745.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11720445.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11775670.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11880815.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11883355.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/11936770.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12059435.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12132045.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12133685.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12150790.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12213320.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12219760.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12337715.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12364440.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12394675.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12626230.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12725060.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/12850675.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13026260.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13121300.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13149820.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13154960.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13332805.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13377970.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13457845.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13609075.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13801805.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13899235.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/13974730.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14172865.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14215185.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14273245.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14365465.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14383655.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14454465.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14457850.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14491295.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14526515.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14634465.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14677290.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14683885.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14763205.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14783475.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14863650.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14939875.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14956015.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/14987385.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15038305.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15088645.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15167915.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15174810.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15296385.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15309425.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15415590.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15495920.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15552905.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15617335.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15625310.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15711270.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15724560.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15792080.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15830530.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15886045.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/15979060.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16090425.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16157715.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16199085.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16246105.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16318835.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16413940.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16465070.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16483030.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16805770.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16872380.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/16964655.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17199905.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17327525.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17375345.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17451735.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17524875.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17564580.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17648035.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17771700.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17773230.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17775605.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/17859040.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18000140.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18109065.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18382755.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18446375.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18506150.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18573795.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18630875.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18675355.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/1868610.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/18901200.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19069865.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19120035.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19193900.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19313920.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19334170.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19554040.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/1958115.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19640770.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19699655.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19724350.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19849435.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/19881015.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/20025165.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/20045210.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/20515200.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/20567185.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/20661815.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2140550.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/21458775.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/21809395.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2182630.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/21930285.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/22039590.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/22396025.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/22510240.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2296605.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/23024345.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/23412090.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/23585425.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/23751290.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2427995.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/24962720.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2572020.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/25920680.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2605005.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/26698400.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2671090.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/26767980.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2680490.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2683170.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/27006770.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/27077340.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/27382100.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/27453730.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2768465.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2810990.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2835955.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/28492295.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/29060510.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/29126710.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2916735.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/29255265.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/29414585.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/2995000.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3005755.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3009090.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/30109990.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/30228840.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/30791780.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/31694040.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3172945.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/31831160.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/32477665.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/33046005.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/33200415.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/33272680.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3354255.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3362130.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3427915.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3443355.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3548380.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3553730.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3657535.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3673115.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3728625.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3729210.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3798155.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3800540.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3838360.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3884280.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3887505.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3888785.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/3988285.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4272660.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4328550.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4338310.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4350290.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4428375.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4435685.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4444365.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4521730.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4593385.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4605095.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4607790.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4614755.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4744175.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4775545.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4810935.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4907060.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4934195.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/4991030.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5009985.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5144365.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5160515.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5421530.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5443775.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5599545.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5656630.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5728075.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5803240.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5808180.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5820220.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5874895.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5882205.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5911085.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/5994275.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6105245.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6118015.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6129475.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6166415.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6226585.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6250055.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6362845.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6436355.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6575560.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6660720.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6807510.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6818435.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6913135.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/6978065.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7047565.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7260385.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7335160.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7390700.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7488115.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7568300.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7624750.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7692665.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7719535.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7818475.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/7896840.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8172010.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8361260.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8544670.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8594000.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8626605.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8636725.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8692165.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8759460.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8836945.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8889985.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8892150.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8961015.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8969485.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/8999675.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9001380.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9085740.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9164320.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9225935.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9267555.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9287195.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9324170.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9349310.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9385020.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9443220.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9531000.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9562230.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9637355.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9643160.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9707775.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9762795.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9877740.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9883610.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_temp/9943365.0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my.log" beforeDir="false" afterPath="$PROJECT_DIR$/my.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/try_log.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +327,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_me.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="638">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
@@ -32,8 +336,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Camera/camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="319">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+              <folding>
+                <element signature="e#23#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +357,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Control/command_center.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="899">
+              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
               </folding>
@@ -53,8 +369,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imageProcessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+            <state relative-caret-position="551">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -65,8 +381,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Control/auto_hover.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="702">
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -93,10 +409,11 @@
         <option value="$PROJECT_DIR$/General/state_machine.py" />
         <option value="$PROJECT_DIR$/General/gui.py" />
         <option value="$PROJECT_DIR$/run_me.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Control/auto_hover.py" />
         <option value="$PROJECT_DIR$/imageProcessing.py" />
         <option value="$PROJECT_DIR$/Control/command_center.py" />
         <option value="$PROJECT_DIR$/Camera/camera.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -276,8 +593,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07969432" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07969432" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -314,12 +632,8 @@
     <entry file="file://$PROJECT_DIR$/red.JPG">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/15109566.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/15293277.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/image_temp/15109566.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/15293277.0.png" />
     <entry file="file://$PROJECT_DIR$/General/gui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -348,54 +662,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Control/control_common.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/2789220.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/2827620.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/2975720.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/2905220.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/1414260.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/1321790.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/1290020.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_temp/1122650.0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_me.py">
+    <entry file="file://$PROJECT_DIR$/image_temp/2789220.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/2827620.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/2975720.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/2905220.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/1414260.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/1321790.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/1290020.0.png" />
+    <entry file="file://$PROJECT_DIR$/image_temp/1122650.0.png" />
+    <entry file="file://$PROJECT_DIR$/Control/auto_hover.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="702">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/image_temp/12032865.0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Control/command_center.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="899">
+          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
           <folding>
             <element signature="e#23#36#0" expanded="true" />
           </folding>
@@ -404,25 +695,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imageProcessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+        <state relative-caret-position="551">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Control/auto_hover.py">
+    <entry file="file://$PROJECT_DIR$/run_me.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="638">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="e#23#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Camera/camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="319">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

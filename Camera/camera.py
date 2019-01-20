@@ -10,6 +10,7 @@ import cv2
 import os
 import time
 
+
 from .create_gstreamer_pipe import create_gstreamer_pipe
 from .convert_YUV import YUV_to_RGB, YUV_to_gray
 
@@ -40,7 +41,7 @@ class Camera():
             os.makedirs(self.IMAGE_DIR)
         tm = time.clock()
         tm = tm*10**6
-        modulo =5
+        modulo = 50
         #print(tm)
         if (tm % modulo == 0):
             cv2.imwrite(os.path.join(path, str(tm) + '.png'), self.RGB_image)

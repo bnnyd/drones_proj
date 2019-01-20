@@ -31,11 +31,15 @@ class CommandCenter():
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)  #
         elif state == States.PICTURE_HOVERING:
             cX, cY, xlen, ylen = ImageProcessing.object_center()
+            if cX>xlen:
+                self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 0)
+                return cX, cY
             A = AutoHover()
             x, y = A.find_direction(expected=[cX, cY], frame_size=[xlen, ylen])
             forward_backwards, left_right = A.engine_power(x, y, [xlen, ylen])
             print("forward backward power is " + str(forward_backwards) + "left right power is" + str(left_right))
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
+            return cX,cY
 
 
         #move = find_direction([200, 200], [320, 320])
@@ -51,6 +55,7 @@ class CommandCenter():
             rotate = 63 + int(my_joystick.get_axis_val(AxisIndex.ROTATE) * 63)
             forward_backwards = 64 + int(my_joystick.get_axis_val(AxisIndex.FORWARD_BACKWARDS) * 63)      #check
             self.__send_to_drone(up_down, rotate, forward_backwards, left_right, 144, 16, 16, 0)
+        return 0,0
 
     @staticmethod
     def __byte9(mSpeedValue, m360RollValue, mNoHeadValue, mStopValue, mToflyValue, mToLandValue):
