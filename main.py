@@ -15,7 +15,7 @@ import shutil
 from Camera.camera import Camera
 #from scratch_joystick import scratch
 
-
+counter = 0
 left_right_clip_val = 0.1
 forward_backwards_clip_val = 0.1
 rotate_clip_val = 0.2
@@ -23,10 +23,6 @@ up_down_clip_val = 0.1
 
 my_joystick = Joystick(left_right_clip_val,forward_backwards_clip_val,rotate_clip_val,up_down_clip_val) # TODO: read these values from the config file
 
-#logger.error('bbbbb')
-#logger.critical('aaa')
-#if os.path.exists("./" + Camera.IMAGE_DIR):
- #   os.remove(Camera.IMAGE_DIR)
 my_camera = Camera()
 my_command_center = CommandCenter()
 my_screen = Screen()
@@ -34,9 +30,9 @@ state=States.IDLE
 cnt = 0         #change
 
 # remove the directory where images of previous run are saved
-path = './' + str(my_camera.IMAGE_DIR)
-if os.path.exists(path):
-    shutil.rmtree(path)
+#path = './' + str(my_camera.IMAGE_DIR)
+#if os.path.exists(path):
+ #   shutil.rmtree(path)
 
 
 
@@ -44,6 +40,7 @@ while state != States.EXIT:
     my_joystick.refresh()
     state = getState(state, my_joystick, cnt)    #change
     cX, cY = my_command_center.perform_action(state, my_joystick=my_joystick)
+
     if state == States.LANDING:      #change
         cnt = cnt + 1
         print(cnt)                 #change
@@ -52,7 +49,7 @@ while state != States.EXIT:
     #time.sleep(0.1)
     #scratch()
     image = my_camera.get_RGB_image()
-    if state==States.PICTURE_HOVERING:
+    if state==States.HOVERING:
         if cX == 2000:
             cv2.putText(image, "Empty dir", (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
         elif cX == 3000:
@@ -66,7 +63,10 @@ while state != States.EXIT:
             cv2.putText(image, "centroid", (cX - 25, cY - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
     cv2.imshow("video", image)
     cv2.waitKey(1)
-    my_camera.update_RGB_image()
+    counter = counter + 1
+    if counter % 100 == 0:
+        my_camera.update_RGB_image()
+        counter = 1
     my_screen.update_state(state)
     my_joystick.update_values()
 

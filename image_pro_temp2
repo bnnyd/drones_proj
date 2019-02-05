@@ -1,3 +1,0 @@
-import imageProcessing
-
-print(imageProcessing.ImageProcessing.object_center())

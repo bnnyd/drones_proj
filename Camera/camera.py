@@ -2,7 +2,6 @@
 import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GObject
-import os
 
 import numpy as np
 
@@ -10,13 +9,10 @@ import cv2
 import os
 import time
 
-
 from .create_gstreamer_pipe import create_gstreamer_pipe
 from .convert_YUV import YUV_to_RGB, YUV_to_gray
 
 class Camera():
-    IMAGE_DIR = 'image_temp'
-
     def __init__(self):
 
         pipeline, self.sink = create_gstreamer_pipe()
@@ -33,26 +29,22 @@ class Camera():
         buffer = buff.extract_dup(0, buff.get_size())
         return buffer
 
-    def save_video(self):
-
-
-        path = './' + str(self.IMAGE_DIR)
-        if not os.path.exists(path):
-            os.makedirs(self.IMAGE_DIR)
-        tm = time.clock()
-        tm = tm*10**6
-        modulo = 50
-        #print(tm)
-        if (tm % modulo == 0):
-            cv2.imwrite(os.path.join(path, str(tm) + '.png'), self.RGB_image)
-        return
+    # def save_video(self):
+    #     image_folder = 'image_temp'
+    #     path = './' + str(image_folder)
+    #     tm = time.clock()
+    #     tm = tm*10**6
+    #     modulo = 1
+    #     print(tm)
+    #     if (tm % modulo == 0):
+    #         cv2.imwrite(os.path.join(path, str(tm) + '.png'), self.RGB_image)
 
 
 
 
     def update_RGB_image(self):
         self.RGB_image = YUV_to_RGB(bytearray(self.__get_buffer()))
-        self.save_video()
+        #self.save_video()
 
     def update_gray_image(self):
         self.gray_image = YUV_to_gray(bytearray(self.__get_buffer()))

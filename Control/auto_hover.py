@@ -24,9 +24,9 @@ class AutoHover():
         #forward <> back = 64 + [-1,1]*63
         #left <> right = 63 + [-1,1]*63
         frame_size = np.asanyarray(frame_size)
-        ## normalize moves in interval from -0.5 to 0.5 to prevent extreme movement --- deleted. maybe we need to add it
-        x_move = (x_move/(0.5*frame_size[0]))
-        y_move = (y_move/(0.5*frame_size[1]))
+        ## normalize moves in interval from -0.5 to 0.5 to prevent extreme movement
+        x_move = (x_move/(0.5*frame_size[0]))*0.5
+        y_move = (y_move/(0.5*frame_size[1]))*0.5
 
         #64 + y_move*63, 63 + x_move*63
         return int(64 + y_move*63), int(63 + x_move*63)
