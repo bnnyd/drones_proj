@@ -12,3 +12,7 @@ class ButtonIndex():
     HOVERING = 3
 class ThresHold():
     SENDING_TIME = 0.5
+
+class NoObj():
+    NO_OBJECT = 3000 #this is an impussible value of centroid that we define when there is no object.
+
