@@ -1,4 +1,0 @@
-sudo su
-wireshark
-
-filter according to the ip. ip==xxx
