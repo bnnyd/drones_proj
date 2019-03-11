@@ -15,15 +15,15 @@ for video in videos:
     vidcap = cv2.VideoCapture(video)
     success,image = vidcap.read()
     print(success)
-    rate = 10
-    cnt = 10
+    rate = 5
+    cnt = 5
     num = 0
     while success:
 
         time.sleep(0.05)
         success,image2 = vidcap.read()
 
-        if False:
+        if False: ## Try to find on a offline video the red point centroids
             if cnt==rate:
                 image = image2
                 cX, cY, xlen, ylen, pr_img = ImageProcessing.object_center(image)
@@ -51,15 +51,15 @@ for video in videos:
             cv2.imshow(video, image)
             cv2.waitKey(1)
             cnt = cnt + 1
-        if True:
+        if True: ## Try to find on an offline video the line angle
             my_lp = LineProcessing()
             if cnt==rate:
                 image = image2
-                angle, a = my_lp.line_angle(image)
+                angle, a = my_lp.line_angle2(image)
                 cnt = 0
             if angle > -1:
-                print(angle)
-                cv2.putText(image, a + " " + str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+                #print(angle)
+                cv2.putText(image, str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
                 #a = np.deg2rad(angle)
                 #cv2.arrowedLine(image, (640,360), (640 + int(50*np.cos(angle)), 360 + int(50*np.sin(angle))), (0,0,255) ,3)
             cv2.imshow(video, image)
