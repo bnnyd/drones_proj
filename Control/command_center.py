@@ -61,9 +61,12 @@ class CommandCenter():
             forward_backwards, left_right = my_hover.engine_power(x, y, [xlen, ylen])
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
+        elif state == States.LINE:
+            self.__send_to_drone(160, 63, 64, 63, 144, 16, 16, 0) ## do notihing except image processing
+
         if state == States.STOP or state == States.STOP_BEFORE_EXIT:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)  # stop
-        return cX, cY,x,y
+        return cX, cY, x, y
 
     @staticmethod
     def __byte9(mSpeedValue, m360RollValue, mNoHeadValue, mStopValue, mToflyValue, mToLandValue):
