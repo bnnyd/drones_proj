@@ -9,7 +9,7 @@ from General.gui import Screen
 from Control.joystick import Joystick
 from Control.command_center import CommandCenter
 from Control.control_common import NoObj
-from Control.lineProcessing import LineProcessing
+#from Control.lineProcessing import LineProcessing
 
 from Camera.camera import Camera
 counter = 0
@@ -17,8 +17,8 @@ my_joystick = Joystick(0.1,0.1,0.2,0.1) # TODO: read these values from the confi
 my_camera = Camera()
 my_command_center = CommandCenter()
 my_screen = Screen()
-my_line = LineProcessing()
-state=States.IDLE
+#my_line = LineProcessing()
+state = States.IDLE
 
 #fourcc = cv2.VideoWriter_fourcc(*'XVID')
 #video = cv2.VideoWriter('flight.avi', fourcc, 20.0, (1280, 720))
@@ -46,8 +46,9 @@ while state != States.EXIT:
             cv2.putText(image, "centroid", (cX - 25, cY - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
 
     if state == States.LINE:
-        angle = my_line.line_angle(image)
-        cv2.putText(image, str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        print(" ")
+    #    angle = my_line.line_angle(image)
+    #    cv2.putText(image, str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
     cv2.imshow("video", image)
     cv2.waitKey(1)
