@@ -23,8 +23,6 @@ def getState(state, my_joystick):
             return States.HOVERING
         if my_joystick.get_button_val(ButtonIndex.TRIGGER) == 1:
             return States.STOP
-        if my_joystick.get_button_val(ButtonIndex.SIDE_BUTTON) == 1:
-            return States.LINE
         if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
             return States.STOP_BEFORE_EXIT
     # ==============================================================
@@ -36,11 +34,7 @@ def getState(state, my_joystick):
         if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
             return States.STOP_BEFORE_EXIT
     # ==============================================================
-    elif state==States.LINE:
-        if my_joystick.get_button_val(ButtonIndex.SIDE_BUTTON) == 1:
-            return States.MANUAL_CONTROL
-        if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
-            return States.STOP_BEFORE_EXIT
+
     # ==============================================================
     elif state==States.STOP:
         return States.IDLE

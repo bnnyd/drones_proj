@@ -17,12 +17,12 @@ class AutoHover():
         Y_TARGET = Max_frame/8
         #positive is rightwards
         x_move = expected[0] - currentX
-        if abs(x_move) < X_TARGET:
-            x_move = 0
 
         #positive is backards
         y_move = expected[1] - currentY
-        if abs(y_move) < Y_TARGET:
+
+        if abs(y_move) < Y_TARGET and abs(x_move) < X_TARGET:
+            x_move = 0
             y_move = 0
         #change cX cY (if "no object", cX=4000)
         return x_move, y_move
