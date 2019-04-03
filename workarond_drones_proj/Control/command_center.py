@@ -61,6 +61,22 @@ class CommandCenter():
             forward_backwards, left_right = my_hover.engine_power(x, y, [xlen, ylen])
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
+        elif state == States.PATH:
+            ## img is period of time
+            time = img
+            forward_backwards = 64
+            left_right = 63
+            up_down = 126
+            if time < 3:
+                forward_backwards = 64 + (-10) #go FORWARD
+                left_right = 63 # no L/R
+            elif 3 <= time and time < 6:
+                forward_backwards = 64 #no F/B
+                left_right = 63 + (-10) #go RIGHT
+            elif 6 <= time :
+                up_down = 126 - (+10) #go DOWN
+            self.__send_to_drone(up_down, 63, forward_backwards, left_right, 144, 16, 16, 0)
+
 
         if state == States.STOP or state == States.STOP_BEFORE_EXIT:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)  # stop

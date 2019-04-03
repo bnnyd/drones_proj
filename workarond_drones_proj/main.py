@@ -22,6 +22,9 @@ state=States.IDLE
 #video = cv2.VideoWriter('flight.avi', fourcc, 20.0, (1280, 720))
 init = time.time()
 image = my_camera.get_RGB_image()
+is_path = False
+init_path = 0
+
 while state != States.EXIT:
     my_joystick.refresh()
     state = getState(state, my_joystick)
@@ -31,7 +34,17 @@ while state != States.EXIT:
         image = my_camera.get_RGB_image()
         init = time.time()
 
-    cX, cY, x, y = my_command_center.perform_action(state, my_joystick=my_joystick,img=image)
+    var = 0
+    if state == States.HOVERING:
+        var = image
+
+    if is_path == False:
+        init_path = time.time()
+    if state == States.PATH:
+        is_path = True
+        var = time.time() - init_path
+
+    cX, cY, x, y = my_command_center.perform_action(state, my_joystick=my_joystick,img=var)
 
 
     # ---- hovering state disabled --- now it will make pre-programmed path
@@ -45,6 +58,7 @@ while state != States.EXIT:
     #         cv2.circle(image, (cX, cY), 5, (255, 255, 255), -1)
     #         cv2.arrowedLine(image, (640,360), (640 + int(x), 360 + int(y)),(255,255,255),5)
     #         cv2.putText(image, "centroid", (cX - 25, cY - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
 
 
     cv2.imshow("video", image)

@@ -15,7 +15,8 @@ class Screen():
         self.canvas.create_text((75, 130), text="MANUAL-CONTROL")
         self.states_rec[States.HOVERING] = self.canvas.create_rectangle(10, 160, 140, 200, fill="#C2B6BF")
         self.canvas.create_text((70, 180), text="HOVERING")
-
+        self.states_rec[States.HOVERING] = self.canvas.create_rectangle(10, 210, 140, 250, fill="#C2B6BF")
+        self.canvas.create_text((70, 230), text="PATH")
         self.states_rec[States.STOP] = self.canvas.create_rectangle(10, 260, 140, 300, fill="#C2B6BF")
         self.canvas.create_text((70, 280), text="STOP")
         self.canvas.pack()
