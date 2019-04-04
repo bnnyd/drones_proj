@@ -6,9 +6,9 @@ import time
 
 from Control.imageProcessing import ImageProcessing
 from Control.lineProcessing import LineProcessing
-
+from Control.lines_dir import linesDirection
 #videos = ['offline.mp4', 'offline1.mp4', 'offline2.mp4']
-videos = ['line.mp4']
+videos = ['line1.mp4']
 
 for video in videos:
     #print(video)
@@ -52,14 +52,19 @@ for video in videos:
             cv2.waitKey(1)
             cnt = cnt + 1
         if True: ## Try to find on an offline video the line angle
-            my_lp = LineProcessing()
             if cnt==rate:
                 image = image2
-                angle, a = my_lp.line_angle2(image)
+                lefty, righty = linesDirection(image)
+                rows, cols = image.shape[:2]
                 cnt = 0
-            if angle > -1:
+            if True:
+            #if angle > -1:
                 #print(angle)
-                cv2.putText(image, str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+                angle = 0
+                text = "dist " + ", angle " + str(np.rad2deg(angle))
+                cv2.putText(image, text, (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+                cv2.line(image, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
+                #cv2.putText(image, str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
                 #a = np.deg2rad(angle)
                 #cv2.arrowedLine(image, (640,360), (640 + int(50*np.cos(angle)), 360 + int(50*np.sin(angle))), (0,0,255) ,3)
             cv2.imshow(video, image)
@@ -67,4 +72,4 @@ for video in videos:
             cnt = cnt + 1
 
 
-cv2.destroyAllWindows(
+cv2.destroyAllWindows()

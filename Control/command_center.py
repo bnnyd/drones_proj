@@ -4,8 +4,8 @@ import time
 from General.general_common import States
 from .control_common import AxisIndex, ThresHold, NoObj
 from Camera.camera import Camera
-from .imageProcessing import ImageProcessing
-from .auto_hover import AutoHover
+# from .imageProcessing import ImageProcessing
+# from .auto_hover import AutoHover
 
 class CommandCenter():
     def __init__(self):
@@ -49,16 +49,18 @@ class CommandCenter():
             self.__send_to_drone(up_down, rotate, forward_backwards, left_right, 144, 16, 16, 0)
 
         elif state == States.HOVERING:
-            cX, cY, xlen, ylen, clean_im = ImageProcessing.object_center(img)
-            my_hover = AutoHover()
-            if cX == NoObj.NO_OBJECT:
-                cent_x = int(xlen/2)
-                cent_y = int(ylen/2)
-            else:
-                cent_x = cX
-                cent_y = cY
-            x, y = my_hover.find_direction(expected=[cent_x, cent_y], frame_size=[xlen, ylen])
-            forward_backwards, left_right = my_hover.engine_power(x, y, [xlen, ylen])
+            # cX, cY, xlen, ylen, clean_im = ImageProcessing.object_center(img)
+            # my_hover = AutoHover()
+            # if cX == NoObj.NO_OBJECT:
+            #     cent_x = int(xlen/2)
+            #     cent_y = int(ylen/2)
+            # else:
+            #     cent_x = cX
+            #     cent_y = cY
+            # x, y = my_hover.find_direction(expected=[cent_x, cent_y], frame_size=[xlen, ylen])
+            # forward_backwards, left_right = my_hover.engine_power(x, y, [xlen, ylen])
+            forward_backwards = 64
+            left_right = 63
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
         elif state == States.LINE:
