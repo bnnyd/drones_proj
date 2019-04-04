@@ -64,17 +64,24 @@ class CommandCenter():
         elif state == States.PATH:
             ## img is period of time
             time = img
+            ## base values
             forward_backwards = 64
             left_right = 63
             up_down = 126
-            if time < 3:
+            ### forward: add a negative number to base
+            ### left: add a negative number to base
+            ### down: add a negative number to base
+
+            if time < 1.5:
                 forward_backwards = 64 + (-10) #go FORWARD
                 left_right = 63 # no L/R
-            elif 3 <= time and time < 6:
+            elif 1.5 <= time and time < 3:
                 forward_backwards = 64 #no F/B
-                left_right = 63 + (-10) #go RIGHT
-            elif 6 <= time :
-                up_down = 126 - (+10) #go DOWN
+                left_right = 63 + (-20) #go LEFT
+            elif 3 <= time:
+                up_down = 126 - (+90) #go DOWN
+                print("landing")
+
             self.__send_to_drone(up_down, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
 
