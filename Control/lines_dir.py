@@ -14,7 +14,8 @@ def linesDirection(image):
     try:
         cnt = contours[0]
     except IndexError:
-        return 0,0
+        print("Error, no line")
+        return 0,0,0
 
     rows, cols = img.shape[:2]
     [vx, vy, x, y] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)
@@ -48,11 +49,11 @@ def linesDirection(image):
 
     if righty_p < -30000 or lefty_p > 30000:
         #print("large numbers")
-        return 0,0
+        return 0,0,0
 
     # the minus is to make the y axis upwards, angle is calculated counterclockwise
     line_ang = -np.rad2deg(np.arctan(m))
     if line_ang < 0:
         line_ang = line_ang + 180
 
-    return x0, y0, m
+    return x0, y0, line_ang

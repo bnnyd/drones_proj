@@ -55,11 +55,12 @@ for video in videos:
         if True: ## Try to find on an offline video the line angle
             if cnt==rate:
                 image = image2
-                x0, y0, m = linesDirection(image)
-                x_p, y_p = linesControl(0,0,m)
+                rows, cols = image.shape[:2]
+                x0, y0, ang = linesDirection(image)
+                x_move, y_move = linesControl(x0,y0,ang,rows,cols)
                 #q, angle = linesDirection(image)
                 #dist = 0
-                rows, cols = image.shape[:2]
+
                 cnt = 0
                 ## take a perpendicular to the line
                 #if dist < 0: ## below the center
@@ -81,7 +82,7 @@ for video in videos:
                 #cv2.line(image, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
                 #cv2.putText(image, "m: " + str(dist) + ", q: " + str(angle), (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
                 #a = np.deg2rad(angle)
-                cv2.arrowedLine(image, (640,360), (x_p, y_p), (0,0,255) ,3)
+                cv2.arrowedLine(image, (640,360), (640 + x_move, 360 - y_move), (0,0,255) ,3)
                 #cv2.arrowedLine(image, (640,360), (640 + arrow_end_x, 360 - arrow_end_y), (0,0,255) ,3)
             cv2.imshow(video, image)
             cv2.waitKey(1)

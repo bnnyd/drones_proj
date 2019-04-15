@@ -11,6 +11,7 @@ from Control.command_center import CommandCenter
 #from Control.control_common import NoObj
 #from Control.lineProcessing import LineProcessing
 from Control.lines_dir import linesDirection
+from Control.line_control import linesControl
 
 from Camera.camera import Camera
 my_joystick = Joystick(0.1,0.1,0.2,0.1) # TODO: read these values from the config file
@@ -52,13 +53,20 @@ while state != States.EXIT:
 
     if state == States.LINE:
         ## inserted in my_command_center
-        dist, angle = linesDirection(image)
+        x0, y0, line_ang = linesDirection(image)
         rows, cols = image.shape[:2]
-        #if lefty!=0 and righty!=0:
-        #    cv2.line(image, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
-        text = "dist " + str(np.floor(dist)) + ", angle " + str(np.floor(np.rad2deg(angle)))
-        cv2.putText(image, text, (int(cols/2), int(rows/2)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        xc = int(cols / 2)
+        yc = int(rows / 2)
 
+        if x0==0 and y0==0 and line_ang==0:
+            x_move =0; y_move=0
+        else:
+            x_move, y_move = linesControl(x0, y0, line_ang, rows, cols)
+        #if lefty!=0 and righty!=0:
+        #cv2.line(image, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
+        #text = "dist " + str(np.floor(dist)) + ", angle " + str(np.floor(np.rad2deg(angle)))
+        #cv2.putText(image, text, (int(cols/2), int(rows/2)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        cv2.arrowedLine(image, (xc, yc), (xc + x_move, yc - y_move), (0, 0, 255), 3)
     cv2.imshow("video", image)
     cv2.waitKey(1)
 
