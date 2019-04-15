@@ -51,6 +51,7 @@ while state != States.EXIT:
     #         cv2.putText(image, "centroid", (cX - 25, cY - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
 
     if state == States.LINE:
+        ## inserted in my_command_center
         dist, angle = linesDirection(image)
         rows, cols = image.shape[:2]
         #if lefty!=0 and righty!=0:

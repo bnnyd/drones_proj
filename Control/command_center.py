@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 import socket
 import time
+import numpy as np
 from General.general_common import States
 from .control_common import AxisIndex, ThresHold, NoObj
 from Camera.camera import Camera
+from Control.lines_dir import linesDirection
+from Control.lines_control import linesControl
 # from .imageProcessing import ImageProcessing
 # from .auto_hover import AutoHover
 
@@ -64,7 +67,19 @@ class CommandCenter():
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
         elif state == States.LINE:
-            self.__send_to_drone(160, 63, 64, 63, 144, 16, 16, 0) ## do notihing except image processing
+            # point on the line on the perpendicular from the center of the image, m is: y = m*x + q
+            x0, y0, m = linesDirection(img)
+            rows, cols = img.shape[:2]
+            cent_x = int(cols/2)
+            cent_y = int(rows/2)
+            # # normalize distance (in pixels) according to img dimensions
+            # dist_norm = dist/((rows/2)**2 + (cols/2)**2)**0.5
+            # if abs(dist_norm) > 1:
+            #     print("Error! Normalization of distance failed")
+            forward_backwards, left_right = linesControl(x0 - cent_x, y0 - cent_y, m)
+            forward_backwards = 64
+            left_right = 63
+            self.__send_to_drone(160, 63, forward_backwards, left_right, 144, 16, 16, 0) ## do notihing except image processing
 
         if state == States.STOP or state == States.STOP_BEFORE_EXIT:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)  # stop
