@@ -42,31 +42,25 @@ while state != States.EXIT:
     cX, cY, x, y = my_command_center.perform_action(state, my_joystick=my_joystick,img=image)
 
     # if state == States.HOVERING:
-    #     if cX == NoObj.NO_OBJECT:
-    #         cv2.putText(image, "No objects", (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-    #     else:
-    #         cX = int(cX)
-    #         cY = int(cY)
-    #         cv2.circle(image, (cX, cY), 5, (255, 255, 255), -1)
-    #  #       cv2.arrowedLine(image, (640,360), (640 + int(x), 360 + int(y)),(255,255,255),5)
-    #         cv2.putText(image, "centroid", (cX - 25, cY - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
 
     if state == States.LINE:
-        ## inserted in my_command_center
-        x0, y0, line_ang = linesDirection(image)
-        rows, cols = image.shape[:2]
-        xc = int(cols / 2)
-        yc = int(rows / 2)
+    #     ## inserted in my_command_center
+    #     x0, y0, line_ang = linesDirection(image)
+    #     rows, cols = image.shape[:2]
+    #     xc = int(cols / 2)
+    #     yc = int(rows / 2)
+    #
 
-        if x0==0 and y0==0 and line_ang==0:
-            x_move =0; y_move=0
-        else:
-            x_move, y_move = linesControl(x0, y0, line_ang, rows, cols)
-        #if lefty!=0 and righty!=0:
-        #cv2.line(image, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
-        #text = "dist " + str(np.floor(dist)) + ", angle " + str(np.floor(np.rad2deg(angle)))
-        #cv2.putText(image, text, (int(cols/2), int(rows/2)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-        cv2.arrowedLine(image, (xc, yc), (xc + x_move, yc - y_move), (0, 0, 255), 3)
+    #     if x0==0 and y0==0 and line_ang==0:
+    #         x_move =0; y_move=0
+    #     else:
+    #         x_move, y_move = linesControl(x0, y0, line_ang, rows, cols)
+    #     #if lefty!=0 and righty!=0:
+    #     #cv2.line(image, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
+        text = "x= " + str(np.floor(cX)) + ", y= " + str(np.floor(cY))
+        cv2.putText(image, text, (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+    #     cv2.arrowedLine(image, (xc, yc), (xc + x_move, yc - y_move), (0, 0, 255), 3)
     cv2.imshow("video", image)
     cv2.waitKey(1)
 

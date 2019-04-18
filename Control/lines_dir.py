@@ -25,16 +25,28 @@ def linesDirection(image):
     # vx and vy are the x and y components of a vector parallel to the line
 
     m = vy/vx
+    #avoid big m's
+    if abs(m)>100:
+        m=np.sign(m)*100
+        print("m excedded")
+
     #lefty = int((-x * vy / vx) + y)
     # the point in which the line crosses the y axes (x=0), = q
     lefty = int((-x * m) + y)
     #righty = int(((cols - x) * vy / vx) + y)
     # the point in which the line crosses the line (x=x_max)
-    righty = int(((cols - x) * m) + y)
+    #righty = int(((cols - x) * m) + y)
 
     # the perpendicular line passing from the center of the pic will be: y - rows/2 = -(1/m)*(x - cols/2)
-    # TODO: m = 0
-    m_p = -1/m
+    # avoid big m_p's
+    if abs(m)<0.01 and abs(m)>0:
+        m_p = -np.sign(m)*100
+        print("mp exceeded")
+    elif m == 0:
+        m_p = 100
+    else:
+        m_p = -1/m
+
     y_p = int(rows/2)
     x_p = int(cols/2)
     lefty_p = int((-x_p * m_p) + y_p)
@@ -42,14 +54,17 @@ def linesDirection(image):
 
 
     # find the crossing point of the two lines
-    x0 = int(-(lefty - lefty_p) / (m - m_p))
+    d_left = lefty - lefty_p
+    # avoid big d_left
+    if abs(d_left)>10000:
+        d_left = np.sign(d_left)*10000
+    print(m)
+    print(m_p)
+    print("______")
+    x0 = int(-(d_left) / (m - m_p))
     y0 = int(m_p * x0 + lefty_p)
 
 
-
-    if righty_p < -30000 or lefty_p > 30000:
-        #print("large numbers")
-        return 0,0,0
 
     # the minus is to make the y axis upwards, angle is calculated counterclockwise
     line_ang = -np.rad2deg(np.arctan(m))
