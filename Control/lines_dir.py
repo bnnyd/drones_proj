@@ -58,9 +58,6 @@ def linesDirection(image):
     # avoid big d_left
     if abs(d_left)>10000:
         d_left = np.sign(d_left)*10000
-    print(m)
-    print(m_p)
-    print("______")
     x0 = int(-(d_left) / (m - m_p))
     y0 = int(m_p * x0 + lefty_p)
 

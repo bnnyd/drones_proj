@@ -4,6 +4,10 @@ import numpy as np
 
 def linesControl(x_dir, y_dir, line_ang, im_rows, im_cols):
 
+    if x_dir==0 and y_dir == 0 and line_ang == 0:
+        # it's the case were the line is exactly perpendicular or when no line is found: - don't move
+        return 0,0
+
     min_dim = min(im_rows, im_cols)
     max_dim = max(im_rows, im_cols)
     # no-move frame:
