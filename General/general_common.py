@@ -11,6 +11,7 @@ class States():
     UP = 9
     AUTO = 10
     DOWN = 11
+    RED_CIRCLE = 12
     STOP = 98
     STOP_BEFORE_EXIT = 99
     EXIT = 100

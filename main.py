@@ -7,6 +7,8 @@ from General.state_machine import getState
 from General.general_common import States
 from General.gui import Screen
 
+from Control.control_common import NoObj
+
 from Control.joystick import Joystick
 from Control.command_center import CommandCenter
 from Control.lines_dir import linesDirection
@@ -50,38 +52,45 @@ while state != States.EXIT:
     if init > 0:
         if 1 < interval and interval < 2:
             state = States.STAND_BY
-            print("stand by")
+            #print("stand by")
         elif 2 < interval and interval < 4:
             state = States.UP
-            print("Up")
-        elif 4 < interval and interval <6:
+            #print("Up")
+        elif 4 < interval and interval <7:
             state = States.LINE
-            print("line")
-        elif 6 < interval and interval <8.5:
+            #print("line")
+        elif 7 < interval and interval <9.5:
             state = States.DOWN
-            print("down")
-        elif 8.5 < interval:
+            #print("down")
+        elif 9.5 < interval:
             state = States.STOP_BEFORE_EXIT
             print("stop before exit")
 
 
     heigth, width, depth = image_big.shape
-    factor = 0.3
+    factor = 1
     image = cv2.resize(image_big, (int(factor * width), int(factor * heigth)))
 
     cX, cY, x, y = my_command_center.perform_action(state, my_joystick=my_joystick, img=image)
-
-
-
-
-
-
 
     #if state is line, print on the screen power and direction
     if state == States.LINE:
         text = "x= " + str(cX) + ", y= " + str(cY)
         cv2.circle(image, (int(x), int(y)), 5, (0,0,255))
         cv2.putText(image, text, (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+
+    if state == States.RED_CIRCLE:
+        if cX == NoObj.NO_OBJECT:
+            cv2.putText(image, "No objects", (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+        else:
+            cX = int(cX)
+            cY = int(cY)
+            cv2.circle(image, (cX, cY), 5, (255, 255, 255), -1)
+            #cv2.arrowedLine(image, (640,360), (640 + int(x), 360 + int(y)),(255,255,255),5)
+            cv2.putText(image, "centroid", (cX - 25, cY - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
+
+
     cv2.imshow("video", image)
     cv2.waitKey(1)
 

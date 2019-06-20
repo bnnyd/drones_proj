@@ -7,7 +7,7 @@ from .control_common import AxisIndex, ThresHold, NoObj
 from Camera.camera import Camera
 from Control.lines_dir import linesDirection
 from Control.line_control import linesControl
-
+from Control.red_circle import objectCenter
 
 class CommandCenter():
     def __init__(self):
@@ -65,6 +65,11 @@ class CommandCenter():
             cX = left_right - 63
             x = x0
             y = y0
+
+        elif state == States.RED_CIRCLE:
+            cX, cY, unused1, unused2, unused3 = objectCenter(img)
+            self.__send_to_drone(0, 63, 64, 63, 144, 16, 16, 0)  # stand by
+
 
         elif state == States.LEFT:
             self.__send_to_drone(160, 63, 64, 50, 144, 16, 16, 0)

@@ -5,14 +5,14 @@ from Camera.camera import Camera
 import glob
 import os
 
-class ImageProcessing():
+class RedCircle():
     def show(self,frame):
         hsv = cv2.cvtColor(frame, cv2.COLOR_RGB2HSV)
         cv2.imshow('h',hsv[:,:,0])
         cv2.waitKey(1)
         cv2.destroyAllWindows()
 
-    def object_center(image):
+    def object_center(self, image):
         hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
         hue = hsv[:,:,1]
         ylen, xlen = hue.shape
