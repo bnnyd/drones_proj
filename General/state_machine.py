@@ -9,6 +9,16 @@ def getState(state, my_joystick):
             return States.STAND_BY
         elif my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
             return States.STOP_BEFORE_EXIT
+        elif my_joystick.get_button_val(ButtonIndex.HOVERING) == 1:
+            return States.AUTO
+    # ==============================================================
+    if state == States.UP:
+        if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
+            return States.STOP_BEFORE_EXIT
+    # ==============================================================
+    if state == States.DOWN:
+        if my_joystick.get_button_val(ButtonIndex.EXIT) == 1:
+            return States.STOP_BEFORE_EXIT
     # ==============================================================
     elif state==States.STAND_BY:
         if my_joystick.get_button_val(ButtonIndex.TRIGGER) == 1:

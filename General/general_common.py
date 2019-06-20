@@ -4,6 +4,13 @@ class States():
     MANUAL_CONTROL = 2
     HOVERING = 3
     LINE = 4
+    RIGHT = 5
+    LEFT = 6
+    FRW = 7
+    BCK = 8
+    UP = 9
+    AUTO = 10
+    DOWN = 11
     STOP = 98
     STOP_BEFORE_EXIT = 99
     EXIT = 100

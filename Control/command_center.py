@@ -56,18 +56,39 @@ class CommandCenter():
             self.__send_to_drone(126, 63, forward_backwards, left_right, 144, 16, 16, 0)
 
         elif state == States.LINE:
-            # point on the line on the perpendicular from the center of the image, m is: y = m*x + q
+            # x0,y0 is the point on the line and on the perpendicular from the center of the image, m is: y = m*x + q, angle is the direction of the line
             x0, y0, angle = linesDirection(img)
             rows, cols = img.shape[:2]
             forward_backwards, left_right = linesControl(x0, y0, angle,rows, cols)
-            self.__send_to_drone(160, 63, forward_backwards, left_right, 144, 16, 16, 0) ## do notihing except image processing
+            self.__send_to_drone(160, 63, forward_backwards, left_right, 144, 16, 16, 0)
             cY = - forward_backwards + 64
             cX = left_right - 63
+            x = x0
+            y = y0
+
+        elif state == States.LEFT:
+            self.__send_to_drone(160, 63, 64, 50, 144, 16, 16, 0)
+
+        elif state == States.RIGHT:
+            self.__send_to_drone(160, 63, 64, 75, 144, 16, 16, 0)
+
+        elif state == States.FRW:
+            self.__send_to_drone(160, 63, 50, 63, 144, 16, 16, 0)
+
+        elif state == States.BCK:
+            self.__send_to_drone(160, 63, 75, 63, 144, 16, 16, 0)
+
+        elif state == States.UP:
+            self.__send_to_drone(200, 63, 64, 63, 144, 16, 16, 0)
+
+        elif state == States.DOWN:
+            self.__send_to_drone(50, 63, 70, 63, 144, 16, 16, 0)
 
         if state == States.STOP or state == States.STOP_BEFORE_EXIT:
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)
             self.__send_to_drone(126, 63, 64, 63, 144, 16, 16, 160)# stop
+
         return cX, cY, x, y
 
     @staticmethod
