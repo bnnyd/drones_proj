@@ -68,8 +68,10 @@ while state != States.EXIT:
 
 
     heigth, width, depth = image_big.shape
-    factor = 1
+    factor = 0.5
     image = cv2.resize(image_big, (int(factor * width), int(factor * heigth)))
+    x_middle = int(factor * width/2)
+    y_middle = int(factor * heigth/2)
 
     cX, cY, x, y = my_command_center.perform_action(state, my_joystick=my_joystick, img=image)
 
@@ -77,11 +79,12 @@ while state != States.EXIT:
     if state == States.LINE:
         text = "x= " + str(cX) + ", y= " + str(cY)
         cv2.circle(image, (int(x), int(y)), 5, (0,0,255))
-        cv2.putText(image, text, (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        #cv2.putText(image, text, (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        cv2.arrowedLine(image, (x_middle, y_middle), (x_middle + 5*int(cX), y_middle - 5*int(cY)), (0, 255, 0), 2)
 
     if state == States.RED_CIRCLE:
         if cX == NoObj.NO_OBJECT:
-            cv2.putText(image, "No objects", (640, 360), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+            cv2.putText(image, "No objects", (x_middle, y_middle), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
         else:
             cX = int(cX)
             cY = int(cY)
