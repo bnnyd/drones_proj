@@ -18,7 +18,7 @@ class Screen():
         self.states_rec[States.UP] = self.canvas.create_rectangle(10, 210, 140, 250, fill="#C2B6BF")
         self.canvas.create_text((70, 230), text="TAKE-OFF")
         self.states_rec[States.LINE] = self.canvas.create_rectangle(10, 260, 140, 300, fill="#C2B6BF")
-        self.canvas.create_text((75, 280), text="LINE ANGLE")
+        self.canvas.create_text((75, 280), text="LINE")
         self.states_rec[States.STOP] = self.canvas.create_rectangle(10, 310, 140, 350, fill="#C2B6BF")
         self.canvas.create_text((70, 330), text="LANDING")
         self.states_rec[States.STOP] = self.canvas.create_rectangle(10, 360, 140, 400, fill="#C2B6BF")
